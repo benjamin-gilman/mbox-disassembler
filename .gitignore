@@ -1,0 +1,20 @@
+# Archive source files
+*.mbox
+*.zip
+
+# Per-run output — specific to a given archive, never commit
+structure.json
+manifest.json
+
+# Extracted archive output folders
+archives/
+output/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.env
+
+# macOS
+.DS_Store
