@@ -157,6 +157,28 @@ Before running Phase 2 (structure proposal), Claude should ask the user:
 
 ---
 
+## Output folder convention
+
+All extracted archive output goes inside the project under `output/`:
+
+```
+~/src/mbox-disassembler/
+└── output/
+    └── <archive_name>/       ← named from structure.json "archive_name" field
+        ├── INDEX.md
+        ├── manifest.json
+        ├── finance/
+        ├── education/
+        └── ...
+```
+
+- `output/` is gitignored — nothing inside it is ever committed
+- Each archive gets its own subfolder so multiple archives can coexist
+- The `archive_name` slug comes from `structure.json` and is set during Phase 2
+- Never write output to the location of the source .mbox or .zip file
+
+---
+
 ## Running Phase 1
 
 ```bash
